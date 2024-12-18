@@ -11,7 +11,7 @@ source:
 
 build:
   skip: true  # [py>=400 or py2k]
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   number: 1
 
 requirements:
@@ -29,7 +29,7 @@ test:
   imports:
     - astral
   commands:
-    - pip check  # [not win]
+    - pip check
   requires:
     - pip
 
@@ -42,8 +42,8 @@ about:
 
   description: |
     Astral is a python module for calculating the times of various aspects of the sun and moon.
-  doc_url: https://astral.readthedocs.io/en/stable/index.html
-  dev_url: http://github.com/sffjunkie/astral
+  doc_url: https://astral.readthedocs.io/
+  dev_url: https://github.com/sffjunkie/astral
 
 extra:
   recipe-maintainers:
