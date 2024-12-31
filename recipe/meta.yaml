@@ -23,13 +23,13 @@ requirements:
     - python
     - dataclasses  # [py<37]
     - backports.zoneinfo  # [py<39]
-    - tzdata
+    - tzdata  # [not win]
 
 test:
   imports:
     - astral
   commands:
-    - pip check
+    - pip check  # [not win]
   requires:
     - pip
 
@@ -49,3 +49,5 @@ extra:
   recipe-maintainers:
     - hajapy
     - jan-janssen
+  skip-lints:
+      - missing_pip_check  # [win]
