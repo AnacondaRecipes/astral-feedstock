@@ -50,4 +50,4 @@ extra:
     - hajapy
     - jan-janssen
   skip-lints:
-      - missing_pip_check  # [win]
+    - missing_pip_check  # [win]
